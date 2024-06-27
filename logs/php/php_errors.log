@@ -1,0 +1,162 @@
+[27-Jun-2024 05:38:20 UTC] PHP Warning:  require(/var/www/suitecrm/vendor/autoload.php): Failed to open stream: No such file or directory in /var/www/suitecrm/bin/console on line 15
+[27-Jun-2024 05:38:20 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/suitecrm/vendor/autoload.php' (include_path='.:/usr/local/lib/php') in /var/www/suitecrm/bin/console:15
+Stack trace:
+#0 {main}
+  thrown in /var/www/suitecrm/bin/console on line 15
+[27-Jun-2024 05:49:29 UTC] PHP Warning:  require(/var/www/suitecrm/vendor/autoload.php): Failed to open stream: No such file or directory in /var/www/suitecrm/bin/console on line 15
+[27-Jun-2024 05:49:29 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/suitecrm/vendor/autoload.php' (include_path='.:/usr/local/lib/php') in /var/www/suitecrm/bin/console:15
+Stack trace:
+#0 {main}
+  thrown in /var/www/suitecrm/bin/console on line 15
+[27-Jun-2024 06:40:46 UTC] PHP Fatal error:  Uncaught Symfony\Component\Dotenv\Exception\PathException: Unable to read the "/var/www/suitecrm/.env" environment file. in /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php:565
+Stack trace:
+#0 /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php(92): Symfony\Component\Dotenv\Dotenv->doLoad()
+#1 /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php(114): Symfony\Component\Dotenv\Dotenv->load()
+#2 /var/www/suitecrm/config/bootstrap.php(47): Symfony\Component\Dotenv\Dotenv->loadEnv()
+#3 /var/www/suitecrm/bin/console(30): require('...')
+#4 {main}
+  thrown in /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php on line 565
+[27-Jun-2024 06:41:44 UTC] PHP Fatal error:  Uncaught Symfony\Component\Dotenv\Exception\PathException: Unable to read the "/var/www/suitecrm/.env" environment file. in /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php:565
+Stack trace:
+#0 /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php(92): Symfony\Component\Dotenv\Dotenv->doLoad()
+#1 /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php(114): Symfony\Component\Dotenv\Dotenv->load()
+#2 /var/www/suitecrm/config/bootstrap.php(47): Symfony\Component\Dotenv\Dotenv->loadEnv()
+#3 /var/www/suitecrm/bin/console(30): require('...')
+#4 {main}
+  thrown in /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php on line 565
+[27-Jun-2024 06:41:58 UTC] PHP Fatal error:  Uncaught Symfony\Component\Dotenv\Exception\PathException: Unable to read the "/var/www/suitecrm/.env" environment file. in /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php:565
+Stack trace:
+#0 /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php(92): Symfony\Component\Dotenv\Dotenv->doLoad()
+#1 /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php(114): Symfony\Component\Dotenv\Dotenv->load()
+#2 /var/www/suitecrm/config/bootstrap.php(47): Symfony\Component\Dotenv\Dotenv->loadEnv()
+#3 /var/www/suitecrm/bin/console(30): require('...')
+#4 {main}
+  thrown in /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php on line 565
+[27-Jun-2024 06:42:07 UTC] PHP Fatal error:  Uncaught Symfony\Component\Dotenv\Exception\PathException: Unable to read the "/var/www/suitecrm/.env" environment file. in /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php:565
+Stack trace:
+#0 /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php(92): Symfony\Component\Dotenv\Dotenv->doLoad()
+#1 /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php(114): Symfony\Component\Dotenv\Dotenv->load()
+#2 /var/www/suitecrm/config/bootstrap.php(47): Symfony\Component\Dotenv\Dotenv->loadEnv()
+#3 /var/www/suitecrm/bin/console(30): require('...')
+#4 {main}
+  thrown in /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php on line 565
+[27-Jun-2024 06:42:19 UTC] PHP Fatal error:  Uncaught Symfony\Component\Dotenv\Exception\PathException: Unable to read the "/var/www/suitecrm/.env" environment file. in /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php:565
+Stack trace:
+#0 /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php(92): Symfony\Component\Dotenv\Dotenv->doLoad()
+#1 /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php(114): Symfony\Component\Dotenv\Dotenv->load()
+#2 /var/www/suitecrm/config/bootstrap.php(47): Symfony\Component\Dotenv\Dotenv->loadEnv()
+#3 /var/www/suitecrm/bin/console(30): require('...')
+#4 {main}
+  thrown in /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php on line 565
+[27-Jun-2024 06:42:27 UTC] PHP Fatal error:  Uncaught Symfony\Component\Dotenv\Exception\PathException: Unable to read the "/var/www/suitecrm/.env" environment file. in /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php:565
+Stack trace:
+#0 /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php(92): Symfony\Component\Dotenv\Dotenv->doLoad()
+#1 /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php(114): Symfony\Component\Dotenv\Dotenv->load()
+#2 /var/www/suitecrm/config/bootstrap.php(47): Symfony\Component\Dotenv\Dotenv->loadEnv()
+#3 /var/www/suitecrm/bin/console(30): require('...')
+#4 {main}
+  thrown in /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php on line 565
+[27-Jun-2024 06:43:08 UTC] PHP Fatal error:  Uncaught Symfony\Component\Dotenv\Exception\PathException: Unable to read the "/var/www/suitecrm/.env" environment file. in /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php:565
+Stack trace:
+#0 /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php(92): Symfony\Component\Dotenv\Dotenv->doLoad()
+#1 /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php(114): Symfony\Component\Dotenv\Dotenv->load()
+#2 /var/www/suitecrm/config/bootstrap.php(47): Symfony\Component\Dotenv\Dotenv->loadEnv()
+#3 /var/www/suitecrm/bin/console(30): require('...')
+#4 {main}
+  thrown in /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php on line 565
+[27-Jun-2024 06:43:35 UTC] PHP Fatal error:  Uncaught Symfony\Component\Dotenv\Exception\PathException: Unable to read the "/var/www/suitecrm/.env" environment file. in /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php:565
+Stack trace:
+#0 /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php(92): Symfony\Component\Dotenv\Dotenv->doLoad()
+#1 /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php(114): Symfony\Component\Dotenv\Dotenv->load()
+#2 /var/www/suitecrm/config/bootstrap.php(47): Symfony\Component\Dotenv\Dotenv->loadEnv()
+#3 /var/www/suitecrm/bin/console(30): require('...')
+#4 {main}
+  thrown in /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php on line 565
+[27-Jun-2024 06:44:41 UTC] PHP Fatal error:  Uncaught Symfony\Component\Dotenv\Exception\PathException: Unable to read the "/var/www/suitecrm/.env" environment file. in /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php:565
+Stack trace:
+#0 /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php(92): Symfony\Component\Dotenv\Dotenv->doLoad()
+#1 /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php(114): Symfony\Component\Dotenv\Dotenv->load()
+#2 /var/www/suitecrm/config/bootstrap.php(47): Symfony\Component\Dotenv\Dotenv->loadEnv()
+#3 /var/www/suitecrm/bin/console(32): require('...')
+#4 {main}
+  thrown in /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php on line 565
+[27-Jun-2024 06:45:07 UTC] PHP Fatal error:  Uncaught Symfony\Component\Dotenv\Exception\PathException: Unable to read the "/var/www/suitecrm/.env" environment file. in /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php:565
+Stack trace:
+#0 /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php(92): Symfony\Component\Dotenv\Dotenv->doLoad()
+#1 /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php(114): Symfony\Component\Dotenv\Dotenv->load()
+#2 /var/www/suitecrm/config/bootstrap.php(47): Symfony\Component\Dotenv\Dotenv->loadEnv()
+#3 /var/www/suitecrm/bin/console(32): require('...')
+#4 {main}
+  thrown in /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php on line 565
+[27-Jun-2024 06:45:24 UTC] PHP Fatal error:  Uncaught Symfony\Component\Dotenv\Exception\PathException: Unable to read the "/var/www/suitecrm/.env" environment file. in /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php:565
+Stack trace:
+#0 /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php(92): Symfony\Component\Dotenv\Dotenv->doLoad()
+#1 /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php(114): Symfony\Component\Dotenv\Dotenv->load()
+#2 /var/www/suitecrm/config/bootstrap.php(47): Symfony\Component\Dotenv\Dotenv->loadEnv()
+#3 /var/www/suitecrm/bin/console(32): require('...')
+#4 {main}
+  thrown in /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php on line 565
+[27-Jun-2024 06:45:40 UTC] PHP Fatal error:  Uncaught Symfony\Component\Dotenv\Exception\PathException: Unable to read the "/var/www/suitecrm/.env" environment file. in /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php:565
+Stack trace:
+#0 /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php(92): Symfony\Component\Dotenv\Dotenv->doLoad()
+#1 /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php(114): Symfony\Component\Dotenv\Dotenv->load()
+#2 /var/www/suitecrm/config/bootstrap.php(47): Symfony\Component\Dotenv\Dotenv->loadEnv()
+#3 /var/www/suitecrm/bin/console(31): require('...')
+#4 {main}
+  thrown in /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php on line 565
+[27-Jun-2024 06:46:01 UTC] PHP Fatal error:  Uncaught Symfony\Component\Dotenv\Exception\PathException: Unable to read the "/var/www/suitecrm/.env" environment file. in /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php:565
+Stack trace:
+#0 /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php(92): Symfony\Component\Dotenv\Dotenv->doLoad()
+#1 /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php(114): Symfony\Component\Dotenv\Dotenv->load()
+#2 /var/www/suitecrm/config/bootstrap.php(47): Symfony\Component\Dotenv\Dotenv->loadEnv()
+#3 /var/www/suitecrm/bin/console(32): require('...')
+#4 {main}
+  thrown in /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php on line 565
+[27-Jun-2024 06:46:14 UTC] PHP Fatal error:  Uncaught Symfony\Component\Dotenv\Exception\PathException: Unable to read the "/var/www/suitecrm/.env" environment file. in /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php:565
+Stack trace:
+#0 /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php(92): Symfony\Component\Dotenv\Dotenv->doLoad()
+#1 /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php(114): Symfony\Component\Dotenv\Dotenv->load()
+#2 /var/www/suitecrm/config/bootstrap.php(47): Symfony\Component\Dotenv\Dotenv->loadEnv()
+#3 /var/www/suitecrm/bin/console(30): require('...')
+#4 {main}
+  thrown in /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php on line 565
+[27-Jun-2024 06:46:33 UTC] PHP Fatal error:  Uncaught Symfony\Component\Dotenv\Exception\PathException: Unable to read the "/var/www/suitecrm/.env" environment file. in /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php:565
+Stack trace:
+#0 /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php(92): Symfony\Component\Dotenv\Dotenv->doLoad()
+#1 /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php(114): Symfony\Component\Dotenv\Dotenv->load()
+#2 /var/www/suitecrm/config/bootstrap.php(47): Symfony\Component\Dotenv\Dotenv->loadEnv()
+#3 /var/www/suitecrm/bin/console(32): require('...')
+#4 {main}
+  thrown in /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php on line 565
+[27-Jun-2024 06:47:24 UTC] PHP Fatal error:  Uncaught Symfony\Component\Dotenv\Exception\PathException: Unable to read the "/var/www/suitecrm/.env" environment file. in /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php:565
+Stack trace:
+#0 /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php(92): Symfony\Component\Dotenv\Dotenv->doLoad()
+#1 /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php(114): Symfony\Component\Dotenv\Dotenv->load()
+#2 /var/www/suitecrm/config/bootstrap.php(47): Symfony\Component\Dotenv\Dotenv->loadEnv()
+#3 /var/www/suitecrm/bin/console(30): require('...')
+#4 {main}
+  thrown in /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php on line 565
+[27-Jun-2024 06:47:39 UTC] PHP Fatal error:  Uncaught Symfony\Component\Dotenv\Exception\PathException: Unable to read the "/var/www/suitecrm/.env" environment file. in /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php:565
+Stack trace:
+#0 /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php(92): Symfony\Component\Dotenv\Dotenv->doLoad()
+#1 /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php(114): Symfony\Component\Dotenv\Dotenv->load()
+#2 /var/www/suitecrm/config/bootstrap.php(49): Symfony\Component\Dotenv\Dotenv->loadEnv()
+#3 /var/www/suitecrm/bin/console(30): require('...')
+#4 {main}
+  thrown in /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php on line 565
+[27-Jun-2024 06:48:03 UTC] PHP Fatal error:  Uncaught Symfony\Component\Dotenv\Exception\PathException: Unable to read the "/var/www/suitecrm/.env" environment file. in /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php:565
+Stack trace:
+#0 /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php(92): Symfony\Component\Dotenv\Dotenv->doLoad()
+#1 /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php(114): Symfony\Component\Dotenv\Dotenv->load()
+#2 /var/www/suitecrm/config/bootstrap.php(53): Symfony\Component\Dotenv\Dotenv->loadEnv()
+#3 /var/www/suitecrm/bin/console(30): require('...')
+#4 {main}
+  thrown in /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php on line 565
+[27-Jun-2024 06:48:38 UTC] PHP Fatal error:  Uncaught Symfony\Component\Dotenv\Exception\PathException: Unable to read the "/var/www/suitecrm/.env" environment file. in /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php:565
+Stack trace:
+#0 /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php(92): Symfony\Component\Dotenv\Dotenv->doLoad()
+#1 /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php(114): Symfony\Component\Dotenv\Dotenv->load()
+#2 /var/www/suitecrm/config/bootstrap.php(50): Symfony\Component\Dotenv\Dotenv->loadEnv()
+#3 /var/www/suitecrm/bin/console(30): require('...')
+#4 {main}
+  thrown in /var/www/suitecrm/vendor/symfony/dotenv/Dotenv.php on line 565

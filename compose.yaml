@@ -1,0 +1,73 @@
+name: practice
+
+services:
+    suitecrm:
+        container_name: suitecrm
+        hostname: suitecrm
+        build: ./
+        image: practice_suitecrm:latest
+        networks:
+            - suitecrm_net
+        volumes:
+            # SuiteCRM Application Folder
+            - ./suitecrm/:/var/www/suitecrm:rw
+            # PHP config
+            - ./docker/config/php/php.ini:/usr/local/etc/php/php.ini
+            # SuiteCRM Log Folder
+            - ./logs/suitecrm:/var/www/suitecrm/logs
+            # APACHE Log Folder
+            - ./logs/apache:/var/log/apache2/
+            # PHP Log Folder
+            - ./logs/php:/var/log/php/
+        environment:
+            - DATABASE_USERNAME=suitecrm
+            - DATABASE_PASSWORD=password
+            - DATABASE_SERVER=mysql
+            - DATABASE_NAME=suitecrm
+            - SITE_HOST="http://127.0.0.1/suitecrm"
+            - DATABASE_PORT=3306
+        ports:
+            - "80:80"
+
+    mysql:
+        container_name: mysql
+        hostname: mysql
+        image: mariadb:10.6
+        ports:
+            - "3306:3306"
+        environment:
+            - MYSQL_ROOT_PASSWORD=password
+            - MYSQL_DATABASE=suitecrm
+            - MYSQL_USER=suitecrm
+            - MYSQL_PASSWORD=password
+        volumes:
+            - suitecrm-mysql-data:/var/lib/mysql
+        networks:
+            - suitecrm_net
+
+    phpmyadmin:
+        container_name: phpmyadmin
+        hostname: phpmyadmin
+        image: phpmyadmin/phpmyadmin
+        links:
+            - mysql
+        ports:
+            - 8181:80
+        environment:
+            - MYSQL_USER=suitecrm
+            - MYSQL_PASSWORD=password
+            - PMA_USER=suitecrm
+            - PMA_PASSWORD=password
+            - PMA_HOSTS=mysql
+            - PMA_PORTS=3306
+        networks:
+            - suitecrm_net
+
+networks:
+  suitecrm_net:
+    ipam:
+      config:
+        - subnet: 192.168.40.0/24
+
+volumes:
+  suitecrm-mysql-data: 
