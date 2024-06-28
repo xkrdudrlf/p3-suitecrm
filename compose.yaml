@@ -6,19 +6,19 @@ services:
         hostname: suitecrm
         build: ./
         image: practice_suitecrm:latest
-        networks:
-            - suitecrm_net
+        depends_on:
+            - phpmyadmin
         volumes:
             # SuiteCRM Application Folder
             - ./suitecrm/:/var/www/suitecrm:rw
             # PHP config
-            - ./docker/config/php/php.ini:/usr/local/etc/php/php.ini
+            - ./docker/config/php/php.ini:/usr/local/etc/php/php.ini:rw
             # SuiteCRM Log Folder
-            - ./logs/suitecrm:/var/www/suitecrm/logs
+            - ./logs/suitecrm:/var/www/suitecrm/logs:rw
             # APACHE Log Folder
-            - ./logs/apache:/var/log/apache2/
+            - ./logs/apache:/var/log/apache2/:rw
             # PHP Log Folder
-            - ./logs/php:/var/log/php/
+            - ./logs/php:/var/log/php/:rw
         environment:
             - DATABASE_USERNAME=suitecrm
             - DATABASE_PASSWORD=password
@@ -28,31 +28,36 @@ services:
             - DATABASE_PORT=3306
         ports:
             - "80:80"
+        networks:
+            - suitecrm_net
 
     mysql:
         container_name: mysql
         hostname: mysql
         image: mariadb:10.6
-        ports:
-            - "3306:3306"
         environment:
             - MYSQL_ROOT_PASSWORD=password
             - MYSQL_DATABASE=suitecrm
             - MYSQL_USER=suitecrm
             - MYSQL_PASSWORD=password
         volumes:
-            - suitecrm-mysql-data:/var/lib/mysql
+            - suitecrm-mysql-data:/var/lib/mysql:rw
+        ports:
+            - "3306:3306"
         networks:
             - suitecrm_net
+        healthcheck:
+            test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+            interval: 10s
+            timeout: 5s
+            retries: 3
 
     phpmyadmin:
         container_name: phpmyadmin
         hostname: phpmyadmin
         image: phpmyadmin/phpmyadmin
-        links:
+        depends_on:
             - mysql
-        ports:
-            - 8181:80
         environment:
             - MYSQL_USER=suitecrm
             - MYSQL_PASSWORD=password
@@ -60,6 +65,8 @@ services:
             - PMA_PASSWORD=password
             - PMA_HOSTS=mysql
             - PMA_PORTS=3306
+        ports:
+            - 8181:80
         networks:
             - suitecrm_net
 

@@ -3,6 +3,7 @@ FROM php:8.1-apache
 
 # Environment variables
 ENV WORKING_DIR=/var/www/suitecrm
+ENV TEMP_WORKING_DIR=/temp_suitecrm
 ENV SUITECRM_VERSION=8.6.1
 
 # Update system and install necessary packages and PHP extensions
@@ -27,6 +28,7 @@ RUN apt-get update && \
         pkg-config && \
     docker-php-ext-configure imap --with-kerberos --with-imap-ssl && \
     docker-php-ext-install -j$(nproc) \
+        soap \
         mysqli \
         pdo_mysql \
         curl \
@@ -46,9 +48,8 @@ RUN apt-get update && \
 RUN npm install -g @angular/cli yarn
 
 # Clone SuiteCRM and remove unnecessary files
-RUN rm -rf ${WORKING_DIR} && \
-    git clone --branch "v${SUITECRM_VERSION}" https://github.com/salesagility/SuiteCRM-Core.git ${WORKING_DIR} && \
-    rm -rf ${WORKING_DIR}/.git ${WORKING_DIR}/.github ${WORKING_DIR}/.gitlab
+RUN git clone --branch "v${SUITECRM_VERSION}" https://github.com/salesagility/SuiteCRM-Core.git ${TEMP_WORKING_DIR} && \
+    rm -rf ${TEMP_WORKING_DIR}/.git ${TEMP_WORKING_DIR}/.github ${TEMP_WORKING_DIR}/.gitlab
 
 # Copy Composer from the composer image
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
@@ -60,7 +61,6 @@ WORKDIR ${WORKING_DIR}
 COPY docker/run-suitecrm.sh /usr/local/bin/run-suitecrm.sh
 COPY docker/config/apache/suitecrm.conf /etc/apache2/conf-available/suitecrm.conf
 
-# Set file permission and mode for running .sh script
 RUN chmod 755 /usr/local/bin/run-*.sh && \
     /usr/sbin/a2enconf suitecrm && \
     /usr/sbin/a2enmod rewrite
