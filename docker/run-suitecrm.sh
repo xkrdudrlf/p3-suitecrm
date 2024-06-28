@@ -5,6 +5,7 @@ sed -i 's/error_reporting = .*/error_reporting = E_ALL \& ~E_DEPRECATED \& ~E_ST
 
 # Copy files from the temporary directory to the mounted directory
 if [ -d $TEMP_WORKING_DIR ]; then
+    rm -rf $WORKING_DIR
     cp -r $TEMP_WORKING_DIR/* $WORKING_DIR
     cp -r $TEMP_WORKING_DIR/.* $WORKING_DIR
     rm -rf $TEMP_WORKING_DIR
@@ -13,13 +14,18 @@ fi
 # Run composer to install packages
 composer install
 
-# Change file permissions and owners
-chmod +x bin/console
-
 # Run the SuiteCRM installation command
+chmod +x bin/console
 bin/console suitecrm:app:install -u $DATABASE_USERNAME -p $DATABASE_PASSWORD -U $DATABASE_USERNAME -P $DATABASE_PASSWORD -H $DATABASE_SERVER -Z $DATABASE_PORT -N $DATABASE_NAME -S $SITE_HOST
 
+# Change file owners for permissions
 chown www-data -R $WORKING_DIR
+
+# Build FE app
+yarn install
+yarn run build:common
+yarn run build:core
+yarn run build:shell
 
 # Start Apache in the foreground
 exec /usr/local/bin/apache2-foreground

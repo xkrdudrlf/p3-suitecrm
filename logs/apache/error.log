@@ -4716,3 +4716,11 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 192.168.40.4. Set the 'ServerName' directive globally to suppress this message
 [Fri Jun 28 04:56:46.262866 2024] [mpm_prefork:notice] [pid 7] AH00163: Apache/2.4.59 (Debian) configured -- resuming normal operations
 [Fri Jun 28 04:56:46.262898 2024] [core:notice] [pid 7] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Fri Jun 28 05:21:03.186331 2024] [core:alert] [pid 591] [client 192.168.40.1:53746] /var/www/suitecrm/public/legacy/.htaccess: RewriteBase takes one argument, the base URL of the per-directory context, referer: http://localhost/suitecrm/
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 192.168.40.4. Set the 'ServerName' directive globally to suppress this message
+[Fri Jun 28 05:25:20.822688 2024] [mpm_prefork:notice] [pid 6] AH00163: Apache/2.4.59 (Debian) configured -- resuming normal operations
+[Fri Jun 28 05:25:20.822758 2024] [core:notice] [pid 6] AH00094: Command line: 'apache2 -D FOREGROUND'
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 192.168.40.4. Set the 'ServerName' directive globally to suppress this message
+[Fri Jun 28 05:30:02.572078 2024] [mpm_prefork:notice] [pid 7] AH00163: Apache/2.4.59 (Debian) configured -- resuming normal operations
+[Fri Jun 28 05:30:02.572320 2024] [core:notice] [pid 7] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Fri Jun 28 05:30:15.141262 2024] [core:alert] [pid 829] [client 192.168.40.1:54436] /var/www/suitecrm/public/legacy/.htaccess: RewriteBase takes one argument, the base URL of the per-directory context, referer: http://localhost/suitecrm/
